@@ -8,11 +8,11 @@ namespace Capa.Entidades
 {
     public class Expediente
     {
-        public int IDColaborador { get; set; }
+        public Colaborador Colaborador { get; set; }
         public DateTime FechaIngreso { get; set; }
-        public int IDPuesto { get; set; }
-        public int IDCarrera { get; set; }
-        public int IDJornada { get; set; }
-        public int IDCarreraProfesional { get; set; }
+        public Puesto Puesto { get; set; }
+        public Carrera Carrera { get; set; }
+        public Jornada Cornada { get; set; }
+        public CarreraProfesional CarreraProfesional { get; set; }
     }
 }

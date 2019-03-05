@@ -9,7 +9,7 @@ namespace Capa.Entidades
     public class PlanillaSalarial
     {
         public int ID { get; set; }
-        public int IDColaborador { get; set; }
+        public Colaborador Colaborador { get; set; }
         public DateTime Fecha { get; set; }
         public double TotalAnualidad { get; set; }
         public double TottalCarreraProfesional { get; set; }

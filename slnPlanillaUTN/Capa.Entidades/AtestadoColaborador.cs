@@ -8,7 +8,7 @@ namespace Capa.Entidades
 {
     public class AtestadoColaborador
     {
-        public int IDColaborador { get; set; }
+        public Colaborador Colaborador { get; set; }
         public string Atestado { get; set; }
     }
 }

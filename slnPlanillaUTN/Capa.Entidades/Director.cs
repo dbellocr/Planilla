@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Capa.Entidades
 {
-    public class Carrera
+   public class Director : Cuenta
     {
-        public string ID { get; set; }
-        public string Descripcion { get; set; }
-        public Director Director { get; set; }
+
+
     }
 }

@@ -19,5 +19,6 @@ namespace Capa.Datos
                 return System.Configuration.ConfigurationManager.ConnectionStrings[nombre].ConnectionString;
             }
         }
+
     }
 }
