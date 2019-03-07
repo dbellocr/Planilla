@@ -42,8 +42,9 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lstVacaciones = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
+            this.dgvVacaciones = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -167,14 +168,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // lstVacaciones
-            // 
-            this.lstVacaciones.Location = new System.Drawing.Point(239, 47);
-            this.lstVacaciones.Name = "lstVacaciones";
-            this.lstVacaciones.Size = new System.Drawing.Size(256, 223);
-            this.lstVacaciones.TabIndex = 14;
-            this.lstVacaciones.UseCompatibleStateImageBehavior = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -184,13 +177,21 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Lista de vacaiones";
             // 
+            // dgvVacaciones
+            // 
+            this.dgvVacaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacaciones.Location = new System.Drawing.Point(239, 47);
+            this.dgvVacaciones.Name = "dgvVacaciones";
+            this.dgvVacaciones.Size = new System.Drawing.Size(258, 223);
+            this.dgvVacaciones.TabIndex = 16;
+            // 
             // frmVacaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 297);
+            this.Controls.Add(this.dgvVacaciones);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lstVacaciones);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cmbEstado);
@@ -208,6 +209,7 @@
             this.Name = "frmVacaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vacaciones";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,7 +231,7 @@
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ListView lstVacaciones;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgvVacaciones;
     }
 }

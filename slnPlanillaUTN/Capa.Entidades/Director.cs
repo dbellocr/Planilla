@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Capa.Entidades
 {
-   public class Director : Cuenta
+    /// <summary>
+    /// Dar persistencia a las variables 
+    /// </summary>
+    public class Director : Cuenta
     {
 
 

@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Capa.Entidades
 {
+    /// <summary>
+    /// Dar persistencia a las variables 
+    /// </summary>
     public class AtestadoColaborador
     {
+        /// <summary>
+        /// Declarar las variables
+        /// </summary>
         public Colaborador Colaborador { get; set; }
         public string Atestado { get; set; }
     }

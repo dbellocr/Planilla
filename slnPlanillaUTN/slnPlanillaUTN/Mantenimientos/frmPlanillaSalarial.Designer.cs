@@ -50,8 +50,9 @@
             this.cmbID = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lstPlanillaSalarial = new System.Windows.Forms.ListView();
             this.label11 = new System.Windows.Forms.Label();
+            this.dgvPlanillaSalarial = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaSalarial)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,9 +69,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ID Colaborador:";
+            this.label2.Text = "Colaborador:";
             // 
             // label3
             // 
@@ -236,14 +237,6 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // lstPlanillaSalarial
-            // 
-            this.lstPlanillaSalarial.Location = new System.Drawing.Point(322, 52);
-            this.lstPlanillaSalarial.Name = "lstPlanillaSalarial";
-            this.lstPlanillaSalarial.Size = new System.Drawing.Size(290, 298);
-            this.lstPlanillaSalarial.TabIndex = 25;
-            this.lstPlanillaSalarial.UseCompatibleStateImageBehavior = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -253,13 +246,21 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Lista de Planilla Salarial:";
             // 
+            // dgvPlanillaSalarial
+            // 
+            this.dgvPlanillaSalarial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlanillaSalarial.Location = new System.Drawing.Point(325, 52);
+            this.dgvPlanillaSalarial.Name = "dgvPlanillaSalarial";
+            this.dgvPlanillaSalarial.Size = new System.Drawing.Size(287, 298);
+            this.dgvPlanillaSalarial.TabIndex = 27;
+            // 
             // frmPlanillaSalarial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 375);
+            this.Controls.Add(this.dgvPlanillaSalarial);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.lstPlanillaSalarial);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cmbID);
@@ -285,6 +286,7 @@
             this.Name = "frmPlanillaSalarial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Planilla Salarial";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaSalarial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,7 +316,7 @@
         private System.Windows.Forms.ComboBox cmbID;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ListView lstPlanillaSalarial;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dgvPlanillaSalarial;
     }
 }
