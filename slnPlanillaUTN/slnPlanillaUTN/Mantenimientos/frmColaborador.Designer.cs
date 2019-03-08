@@ -51,10 +51,11 @@
             this.btnTomarFoto = new System.Windows.Forms.Button();
             this.pbFotografía = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSubir = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnSubirCurriculum = new System.Windows.Forms.Button();
+            this.lblNombreArchivo = new System.Windows.Forms.Label();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnConfirmarTomar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +155,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 617);
+            this.label8.Location = new System.Drawing.Point(19, 769);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
@@ -191,7 +192,7 @@
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(152, 614);
+            this.cmbEstado.Location = new System.Drawing.Point(152, 766);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(176, 24);
@@ -199,17 +200,18 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(408, 646);
+            this.btnAceptar.Location = new System.Drawing.Point(424, 853);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(148, 65);
             this.btnAceptar.TabIndex = 21;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(569, 646);
+            this.btnSalir.Location = new System.Drawing.Point(585, 853);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(148, 65);
@@ -233,7 +235,7 @@
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(69, 447);
+            this.btnSubirFoto.Location = new System.Drawing.Point(69, 605);
             this.btnSubirFoto.Name = "btnSubirFoto";
             this.btnSubirFoto.Size = new System.Drawing.Size(120, 35);
             this.btnSubirFoto.TabIndex = 25;
@@ -243,57 +245,61 @@
             // 
             // btnTomarFoto
             // 
-            this.btnTomarFoto.Location = new System.Drawing.Point(206, 447);
+            this.btnTomarFoto.Location = new System.Drawing.Point(235, 605);
             this.btnTomarFoto.Name = "btnTomarFoto";
             this.btnTomarFoto.Size = new System.Drawing.Size(163, 35);
             this.btnTomarFoto.TabIndex = 26;
-            this.btnTomarFoto.Text = "Tomar con web cam";
+            this.btnTomarFoto.Text = "Abrir web cam";
             this.btnTomarFoto.UseVisualStyleBackColor = true;
+            this.btnTomarFoto.Click += new System.EventHandler(this.btnTomarFoto_Click);
             // 
             // pbFotografía
             // 
-            this.pbFotografía.Location = new System.Drawing.Point(152, 275);
+            this.pbFotografía.Location = new System.Drawing.Point(82, 299);
             this.pbFotografía.Name = "pbFotografía";
-            this.pbFotografía.Size = new System.Drawing.Size(144, 154);
+            this.pbFotografía.Size = new System.Drawing.Size(323, 275);
+            this.pbFotografía.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotografía.TabIndex = 27;
             this.pbFotografía.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 529);
+            this.label6.Location = new System.Drawing.Point(14, 681);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 28;
             this.label6.Text = "Curriculum:";
             // 
-            // btnSubir
+            // btnSubirCurriculum
             // 
-            this.btnSubir.Location = new System.Drawing.Point(165, 520);
-            this.btnSubir.Name = "btnSubir";
-            this.btnSubir.Size = new System.Drawing.Size(120, 35);
-            this.btnSubir.TabIndex = 29;
-            this.btnSubir.Text = "Subir";
-            this.btnSubir.UseVisualStyleBackColor = true;
+            this.btnSubirCurriculum.Location = new System.Drawing.Point(235, 672);
+            this.btnSubirCurriculum.Name = "btnSubirCurriculum";
+            this.btnSubirCurriculum.Size = new System.Drawing.Size(120, 35);
+            this.btnSubirCurriculum.TabIndex = 29;
+            this.btnSubirCurriculum.Text = "Subir";
+            this.btnSubirCurriculum.UseVisualStyleBackColor = true;
+            this.btnSubirCurriculum.Click += new System.EventHandler(this.btnSubirCurriculum_Click);
             // 
-            // label11
+            // lblNombreArchivo
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(97, 529);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "label11";
+            this.lblNombreArchivo.AutoSize = true;
+            this.lblNombreArchivo.Location = new System.Drawing.Point(97, 681);
+            this.lblNombreArchivo.Name = "lblNombreArchivo";
+            this.lblNombreArchivo.Size = new System.Drawing.Size(0, 17);
+            this.lblNombreArchivo.TabIndex = 30;
+            this.lblNombreArchivo.Visible = false;
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.Location = new System.Drawing.Point(306, 521);
+            this.btnVisualizar.Location = new System.Drawing.Point(376, 673);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(120, 35);
             this.btnVisualizar.TabIndex = 31;
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // dataGridView1
             // 
@@ -304,15 +310,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(656, 482);
             this.dataGridView1.TabIndex = 32;
             // 
+            // btnConfirmarTomar
+            // 
+            this.btnConfirmarTomar.Location = new System.Drawing.Point(235, 605);
+            this.btnConfirmarTomar.Name = "btnConfirmarTomar";
+            this.btnConfirmarTomar.Size = new System.Drawing.Size(163, 35);
+            this.btnConfirmarTomar.TabIndex = 33;
+            this.btnConfirmarTomar.Text = "Capturar";
+            this.btnConfirmarTomar.UseVisualStyleBackColor = true;
+            this.btnConfirmarTomar.Visible = false;
+            this.btnConfirmarTomar.Click += new System.EventHandler(this.btnConfirmarTomar_Click);
+            // 
             // frmColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 749);
+            this.ClientSize = new System.Drawing.Size(1182, 1000);
+            this.Controls.Add(this.btnConfirmarTomar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnVisualizar);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnSubir);
+            this.Controls.Add(this.lblNombreArchivo);
+            this.Controls.Add(this.btnSubirCurriculum);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pbFotografía);
             this.Controls.Add(this.btnTomarFoto);
@@ -339,6 +357,7 @@
             this.Name = "frmColaborador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colaborador";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmColaborador_FormClosing);
             this.Load += new System.EventHandler(this.frmColaborador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -372,9 +391,10 @@
         private System.Windows.Forms.Button btnTomarFoto;
         private System.Windows.Forms.PictureBox pbFotografía;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSubir;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnSubirCurriculum;
+        private System.Windows.Forms.Label lblNombreArchivo;
         private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnConfirmarTomar;
     }
 }
