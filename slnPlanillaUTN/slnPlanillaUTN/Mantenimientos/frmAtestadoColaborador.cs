@@ -77,10 +77,27 @@ namespace slnPlanillaUTN.Mantenimientos
         }
         public void LlenarListBox()
         {
-
+            lstAtestados.DataSource = null;
             lstAtestados.DataSource = listaAtestados;
     
 
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+
+            if (lstAtestados.SelectedItem != null)
+            {
+               string rutaArchivo= ((AtestadoColaborador)lstAtestados.SelectedItem).RutaCompleta;
+                frmVisualizarPDF frm = new frmVisualizarPDF(rutaArchivo);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error, debe seleccionar un atestado para visualizar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+           
         }
     }
 }

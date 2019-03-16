@@ -89,6 +89,7 @@
             this.btnVer.TabIndex = 11;
             this.btnVer.Text = "Ver";
             this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // rdbDiplomado
             // 

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace slnPlanillaUTN.Mantenimientos
 {
-    public partial class frmExpediente : Form
+    public partial class frmExpedienteAdministrativo : Form
     {
-        public frmExpediente()
+        public frmExpedienteAdministrativo()
         {
             InitializeComponent();
+        }
+
+        private void btnVerExpediente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -58,6 +58,10 @@
             this.btnConfirmarTomar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEditarAtestados = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Expediente = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).BeginInit();
             this.SuspendLayout();
@@ -308,10 +312,20 @@
             // 
             // dgvColaboradores
             // 
+            this.dgvColaboradores.AllowUserToDeleteRows = false;
+            this.dgvColaboradores.AllowUserToResizeRows = false;
+            this.dgvColaboradores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColaboradores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Email,
+            this.Telefono,
+            this.Expediente});
             this.dgvColaboradores.Location = new System.Drawing.Point(493, 68);
+            this.dgvColaboradores.MultiSelect = false;
             this.dgvColaboradores.Name = "dgvColaboradores";
             this.dgvColaboradores.RowTemplate.Height = 24;
+            this.dgvColaboradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvColaboradores.Size = new System.Drawing.Size(656, 482);
             this.dgvColaboradores.TabIndex = 32;
             // 
@@ -346,6 +360,32 @@
             this.btnEditarAtestados.Text = "Editar";
             this.btnEditarAtestados.UseVisualStyleBackColor = true;
             this.btnEditarAtestados.Click += new System.EventHandler(this.btnEditarAtestados_Click);
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "NombreCompleto";
+            this.Nombre.HeaderText = "Nombre Completo del Colaborador";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Correo Electrónico";
+            this.Email.Name = "Email";
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Expediente
+            // 
+            this.Expediente.HeaderText = "Ver expediente";
+            this.Expediente.Name = "Expediente";
+            this.Expediente.Text = "Ver expendiente";
+            this.Expediente.ToolTipText = "Ver expendiente";
+            this.Expediente.UseColumnTextForButtonValue = true;
             // 
             // frmColaborador
             // 
@@ -426,5 +466,9 @@
         private System.Windows.Forms.Button btnConfirmarTomar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnEditarAtestados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewButtonColumn Expediente;
     }
 }

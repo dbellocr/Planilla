@@ -168,11 +168,10 @@ namespace Capa.Datos
 
                     Colaborador c = new Colaborador()
                     {
-                        ID = Convert.ToUInt16(reader["ID"].ToString()),
+                        ID = Convert.ToInt32(reader["ID"].ToString()),
                         Foto = reader["Foto"].ToString(),
                         Curriculum = reader["Curriculum"].ToString(),
-                        Telefono = Convert.ToUInt16(reader["Telefono"].ToString()),
-                        Estado = Convert.ToBoolean(reader["Estado"].ToString()),
+                        Telefono = Convert.ToInt32(reader["Telefono"].ToString()),
                         Email = reader["Email"].ToString(),
                         PrimerApellido = reader["PrimerApellido"].ToString(),
                         SegundoApellido = reader["SegundoApellido"].ToString(),

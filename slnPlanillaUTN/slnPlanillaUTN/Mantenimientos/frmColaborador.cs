@@ -21,6 +21,7 @@ namespace slnPlanillaUTN.Mantenimientos
     {
         OpenFileDialog dialog;
         OpenFileDialog ofdImagen;
+        ColaboradorLogica colaboradorLogica;
         frmAtestadoColaborador frmAtestado;
         private FilterInfoCollection dispositivosVideo;
         private VideoCaptureDevice videoFinal;
@@ -31,6 +32,7 @@ namespace slnPlanillaUTN.Mantenimientos
             frmAtestado = new frmAtestadoColaborador();
             ofdImagen =  new OpenFileDialog();
             dialog =  new OpenFileDialog();
+            colaboradorLogica = new ColaboradorLogica();
             InitializeComponent();
         }
 
@@ -38,11 +40,18 @@ namespace slnPlanillaUTN.Mantenimientos
         private void frmColaborador_Load(object sender, EventArgs e)
         {
             CargarComboEstado();
+            CargarGrid();
             dispositivosVideo = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             videoFinal = new VideoCaptureDevice();
 
         }
+        private void CargarGrid()
+        {
 
+            dgvColaboradores.AutoGenerateColumns = false;
+            dgvColaboradores.DataSource = colaboradorLogica.SeleccionarTodos();
+
+        }
         private void CargarComboEstado()
         {
             cmbEstado.DataSource = Enum.GetValues(typeof(Estado));
@@ -147,7 +156,7 @@ namespace slnPlanillaUTN.Mantenimientos
                 frmAtestado.AsignarColaborador(colaborador);
                 frmAtestado.GuardarArchivos();
                 MessageBox.Show("Se ha guardado el colaborador", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                CargarGrid();
             }
             catch (Exception ex)
             {
@@ -203,6 +212,11 @@ namespace slnPlanillaUTN.Mantenimientos
             Colaborador oColaborador = new Colaborador();
            
             frmAtestado.ShowDialog();
+
+        }
+
+        private void btnVerExpediente_Click(object sender, EventArgs e)
+        {
 
         }
     }
