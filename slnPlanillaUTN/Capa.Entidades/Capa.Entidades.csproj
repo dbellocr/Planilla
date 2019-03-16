@@ -45,8 +45,10 @@
     <Compile Include="Carrera.cs" />
     <Compile Include="CarreraProfesional.cs" />
     <Compile Include="Colaborador.cs" />
+    <Compile Include="ColaboradorFactory.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="Director.cs" />
+    <Compile Include="Estado.cs" />
     <Compile Include="Expediente.cs" />
     <Compile Include="Jornada.cs" />
     <Compile Include="PlanillaSalarial.cs" />

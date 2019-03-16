@@ -45,6 +45,10 @@
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -59,6 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Log4Net\Logging.cs" />
+    <Compile Include="Mantenimientos\frmAtestadoColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmAtestadoColaborador.Designer.cs">
+      <DependentUpon>frmAtestadoColaborador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmVisualizarCVImagen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +105,6 @@
     </Compile>
     <Compile Include="Mantenimientos\Docente\frmDocente.Designer.cs">
       <DependentUpon>frmDocente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\frmAlestadoColaborador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\frmAlestadoColaborador.Designer.cs">
-      <DependentUpon>frmAlestadoColaborador.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\frmCarrera.cs">
       <SubType>Form</SubType>
@@ -157,6 +162,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Mantenimientos\frmAtestadoColaborador.resx">
+      <DependentUpon>frmAtestadoColaborador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmVisualizarCVImagen.resx">
       <DependentUpon>frmVisualizarCVImagen.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Docente\frmDocente.resx">
       <DependentUpon>frmDocente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmAlestadoColaborador.resx">
-      <DependentUpon>frmAlestadoColaborador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmCarrera.resx">
       <DependentUpon>frmCarrera.cs</DependentUpon>

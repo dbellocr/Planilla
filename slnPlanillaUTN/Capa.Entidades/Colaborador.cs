@@ -23,5 +23,13 @@ namespace Capa.Entidades
         public string Curriculum { get; set; }
         public string Foto { get; set; }
         public bool Estado { get; set; }
+
+        public string NombreCompleto
+        {
+            get
+            {
+                return Nombre + " " + PrimerApellido + " " + SegundoApellido;
+            }
+        }
     }
 }

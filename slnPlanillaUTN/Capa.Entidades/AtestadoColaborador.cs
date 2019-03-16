@@ -16,5 +16,12 @@ namespace Capa.Entidades
         /// </summary>
         public Colaborador Colaborador { get; set; }
         public string Atestado { get; set; }
+        public string RutaCompleta { get; set; }
+
+
+        public override string ToString()
+        {
+            return Colaborador.NombreCompleto + " " + Atestado;
+        }
     }
 }

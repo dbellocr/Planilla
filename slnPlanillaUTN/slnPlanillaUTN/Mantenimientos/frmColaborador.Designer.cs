@@ -54,10 +54,12 @@
             this.btnSubirCurriculum = new System.Windows.Forms.Button();
             this.lblNombreArchivo = new System.Windows.Forms.Label();
             this.btnVisualizar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvColaboradores = new System.Windows.Forms.DataGridView();
             this.btnConfirmarTomar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnEditarAtestados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,9 +68,9 @@
             this.label1.Location = new System.Drawing.Point(16, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
+            this.label1.Text = "Cédula:";
             // 
             // txtID
             // 
@@ -155,7 +157,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 769);
+            this.label8.Location = new System.Drawing.Point(14, 811);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
@@ -188,11 +190,13 @@
             this.mktTelefono.Name = "mktTelefono";
             this.mktTelefono.Size = new System.Drawing.Size(176, 22);
             this.mktTelefono.TabIndex = 18;
+            this.mktTelefono.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // cmbEstado
             // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(152, 766);
+            this.cmbEstado.Location = new System.Drawing.Point(147, 808);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(176, 24);
@@ -255,6 +259,7 @@
             // 
             // pbFotografía
             // 
+            this.pbFotografía.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFotografía.Location = new System.Drawing.Point(82, 299);
             this.pbFotografía.Name = "pbFotografía";
             this.pbFotografía.Size = new System.Drawing.Size(323, 275);
@@ -301,14 +306,14 @@
             this.btnVisualizar.UseVisualStyleBackColor = true;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
-            // dataGridView1
+            // dgvColaboradores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(493, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(656, 482);
-            this.dataGridView1.TabIndex = 32;
+            this.dgvColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColaboradores.Location = new System.Drawing.Point(493, 68);
+            this.dgvColaboradores.Name = "dgvColaboradores";
+            this.dgvColaboradores.RowTemplate.Height = 24;
+            this.dgvColaboradores.Size = new System.Drawing.Size(656, 482);
+            this.dgvColaboradores.TabIndex = 32;
             // 
             // btnConfirmarTomar
             // 
@@ -321,13 +326,36 @@
             this.btnConfirmarTomar.Visible = false;
             this.btnConfirmarTomar.Click += new System.EventHandler(this.btnConfirmarTomar_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 748);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 17);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Atestados: ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // btnEditarAtestados
+            // 
+            this.btnEditarAtestados.Location = new System.Drawing.Point(232, 739);
+            this.btnEditarAtestados.Name = "btnEditarAtestados";
+            this.btnEditarAtestados.Size = new System.Drawing.Size(120, 35);
+            this.btnEditarAtestados.TabIndex = 35;
+            this.btnEditarAtestados.Text = "Editar";
+            this.btnEditarAtestados.UseVisualStyleBackColor = true;
+            this.btnEditarAtestados.Click += new System.EventHandler(this.btnEditarAtestados_Click);
+            // 
             // frmColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 1000);
+            this.Controls.Add(this.btnEditarAtestados);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnConfirmarTomar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvColaboradores);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.lblNombreArchivo);
             this.Controls.Add(this.btnSubirCurriculum);
@@ -360,7 +388,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmColaborador_FormClosing);
             this.Load += new System.EventHandler(this.frmColaborador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,7 +422,9 @@
         private System.Windows.Forms.Button btnSubirCurriculum;
         private System.Windows.Forms.Label lblNombreArchivo;
         private System.Windows.Forms.Button btnVisualizar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvColaboradores;
         private System.Windows.Forms.Button btnConfirmarTomar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnEditarAtestados;
     }
 }
