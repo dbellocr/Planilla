@@ -17,5 +17,12 @@ namespace Capa.Entidades
         public int ID { get; set; }
         public string Grado { get; set; }
         public int Puntos { get; set; }
+
+        public override string ToString()
+        {
+            return Grado;
+        }
+
+
     }
 }

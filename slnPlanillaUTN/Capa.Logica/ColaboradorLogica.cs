@@ -14,16 +14,19 @@ namespace Capa.Logica
         /// Inserta o actualiza el encargado dependiendo de su ID
         /// </summary>
         /// <param name="colaborador"></param>
-        public void Insertar(Colaborador colaborador)
+        public void Insertar(Colaborador colaborador, Cuenta cuenta)
         {
             var enc = new ColaboradorDatos();
-            if (enc.SeleccionarPorID(colaborador) != null)
+            if (ColaboradorDatos.SeleccionarPorID(colaborador.ID) != null)
             {
                 enc.Actualizar(colaborador);
+                CuentaLogica.Guardar(cuenta);
             }
             else
             {
                 enc.Insertar(colaborador);
+                CuentaLogica.Guardar(cuenta);
+
             }
 
         }
@@ -40,9 +43,9 @@ namespace Capa.Logica
         /// </summary>
         /// <param name="colaborador"></param>
         /// <returns></returns>
-        public Colaborador SeleccionarPorID(Colaborador colaborador)
+        public Colaborador SeleccionarPorID(string colaboradorID)
         {
-            return new ColaboradorDatos().SeleccionarPorID(colaborador);
+            return  ColaboradorDatos.SeleccionarPorID(colaboradorID);
         }
     }
 }

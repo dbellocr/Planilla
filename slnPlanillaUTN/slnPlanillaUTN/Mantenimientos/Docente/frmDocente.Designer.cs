@@ -37,60 +37,67 @@
             // 
             // btnVerExpediente
             // 
-            this.btnVerExpediente.Location = new System.Drawing.Point(24, 12);
+            this.btnVerExpediente.Location = new System.Drawing.Point(32, 15);
+            this.btnVerExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVerExpediente.Name = "btnVerExpediente";
-            this.btnVerExpediente.Size = new System.Drawing.Size(156, 58);
+            this.btnVerExpediente.Size = new System.Drawing.Size(208, 71);
             this.btnVerExpediente.TabIndex = 0;
             this.btnVerExpediente.Text = "Ver Expediente";
             this.btnVerExpediente.UseVisualStyleBackColor = true;
+            this.btnVerExpediente.Click += new System.EventHandler(this.btnVerExpediente_Click);
             // 
             // btnActualizarExpediente
             // 
-            this.btnActualizarExpediente.Location = new System.Drawing.Point(24, 76);
+            this.btnActualizarExpediente.Location = new System.Drawing.Point(32, 94);
+            this.btnActualizarExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizarExpediente.Name = "btnActualizarExpediente";
-            this.btnActualizarExpediente.Size = new System.Drawing.Size(156, 58);
+            this.btnActualizarExpediente.Size = new System.Drawing.Size(208, 71);
             this.btnActualizarExpediente.TabIndex = 1;
             this.btnActualizarExpediente.Text = "Actualizar Expediente";
             this.btnActualizarExpediente.UseVisualStyleBackColor = true;
             // 
             // btnSolicitarVacaciones
             // 
-            this.btnSolicitarVacaciones.Location = new System.Drawing.Point(24, 140);
+            this.btnSolicitarVacaciones.Location = new System.Drawing.Point(32, 172);
+            this.btnSolicitarVacaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSolicitarVacaciones.Name = "btnSolicitarVacaciones";
-            this.btnSolicitarVacaciones.Size = new System.Drawing.Size(156, 58);
+            this.btnSolicitarVacaciones.Size = new System.Drawing.Size(208, 71);
             this.btnSolicitarVacaciones.TabIndex = 2;
             this.btnSolicitarVacaciones.Text = "Solicitar Vacaciones";
             this.btnSolicitarVacaciones.UseVisualStyleBackColor = true;
             // 
             // btnSolicitarReportes
             // 
-            this.btnSolicitarReportes.Location = new System.Drawing.Point(24, 204);
+            this.btnSolicitarReportes.Location = new System.Drawing.Point(32, 251);
+            this.btnSolicitarReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSolicitarReportes.Name = "btnSolicitarReportes";
-            this.btnSolicitarReportes.Size = new System.Drawing.Size(156, 58);
+            this.btnSolicitarReportes.Size = new System.Drawing.Size(208, 71);
             this.btnSolicitarReportes.TabIndex = 3;
             this.btnSolicitarReportes.Text = "Solicitar Reportes";
             this.btnSolicitarReportes.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(24, 268);
+            this.btnSalir.Location = new System.Drawing.Point(32, 330);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(156, 58);
+            this.btnSalir.Size = new System.Drawing.Size(208, 71);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // MantenimientoDocente
+            // frmDocente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(202, 341);
+            this.ClientSize = new System.Drawing.Size(269, 420);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnSolicitarReportes);
             this.Controls.Add(this.btnSolicitarVacaciones);
             this.Controls.Add(this.btnActualizarExpediente);
             this.Controls.Add(this.btnVerExpediente);
-            this.Name = "MantenimientoDocente";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmDocente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Docente";
             this.ResumeLayout(false);

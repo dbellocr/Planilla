@@ -55,13 +55,13 @@
             this.lblNombreArchivo = new System.Windows.Forms.Label();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.dgvColaboradores = new System.Windows.Forms.DataGridView();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Expediente = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnConfirmarTomar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEditarAtestados = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Expediente = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotografía)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +86,7 @@
             // 
             // txtPirmerApellido
             // 
-            this.txtPirmerApellido.Location = new System.Drawing.Point(152, 108);
+            this.txtPirmerApellido.Location = new System.Drawing.Point(152, 78);
             this.txtPirmerApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtPirmerApellido.Name = "txtPirmerApellido";
             this.txtPirmerApellido.Size = new System.Drawing.Size(176, 22);
@@ -95,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 112);
+            this.label2.Location = new System.Drawing.Point(16, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 17);
@@ -104,7 +104,7 @@
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(152, 149);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(152, 110);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(176, 22);
@@ -113,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 153);
+            this.label3.Location = new System.Drawing.Point(16, 114);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 17);
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 203);
+            this.label4.Location = new System.Drawing.Point(16, 151);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
@@ -132,7 +132,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(152, 236);
+            this.txtEmail.Location = new System.Drawing.Point(152, 173);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(176, 22);
@@ -141,7 +141,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 240);
+            this.label5.Location = new System.Drawing.Point(16, 177);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
@@ -151,7 +151,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 275);
+            this.label7.Location = new System.Drawing.Point(9, 203);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
@@ -161,7 +161,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 811);
+            this.label8.Location = new System.Drawing.Point(16, 709);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
@@ -170,7 +170,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(152, 64);
+            this.txtNombre.Location = new System.Drawing.Point(152, 48);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(176, 22);
@@ -179,7 +179,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 68);
+            this.label9.Location = new System.Drawing.Point(16, 52);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 17);
@@ -188,7 +188,7 @@
             // 
             // mktTelefono
             // 
-            this.mktTelefono.Location = new System.Drawing.Point(152, 193);
+            this.mktTelefono.Location = new System.Drawing.Point(152, 141);
             this.mktTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.mktTelefono.Mask = "99999999";
             this.mktTelefono.Name = "mktTelefono";
@@ -200,7 +200,7 @@
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(147, 808);
+            this.cmbEstado.Location = new System.Drawing.Point(149, 706);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(176, 24);
@@ -208,7 +208,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(424, 853);
+            this.btnAceptar.Location = new System.Drawing.Point(424, 758);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(148, 65);
@@ -219,7 +219,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(585, 853);
+            this.btnSalir.Location = new System.Drawing.Point(585, 758);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(148, 65);
@@ -243,9 +243,9 @@
             // 
             // btnSubirFoto
             // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(69, 605);
+            this.btnSubirFoto.Location = new System.Drawing.Point(75, 515);
             this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.Size = new System.Drawing.Size(120, 35);
+            this.btnSubirFoto.Size = new System.Drawing.Size(146, 35);
             this.btnSubirFoto.TabIndex = 25;
             this.btnSubirFoto.Text = "Subir";
             this.btnSubirFoto.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@
             // 
             // btnTomarFoto
             // 
-            this.btnTomarFoto.Location = new System.Drawing.Point(235, 605);
+            this.btnTomarFoto.Location = new System.Drawing.Point(241, 515);
             this.btnTomarFoto.Name = "btnTomarFoto";
             this.btnTomarFoto.Size = new System.Drawing.Size(163, 35);
             this.btnTomarFoto.TabIndex = 26;
@@ -264,7 +264,7 @@
             // pbFotografía
             // 
             this.pbFotografía.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFotografía.Location = new System.Drawing.Point(82, 299);
+            this.pbFotografía.Location = new System.Drawing.Point(75, 227);
             this.pbFotografía.Name = "pbFotografía";
             this.pbFotografía.Size = new System.Drawing.Size(323, 275);
             this.pbFotografía.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -274,7 +274,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 681);
+            this.label6.Location = new System.Drawing.Point(16, 579);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 17);
@@ -283,7 +283,7 @@
             // 
             // btnSubirCurriculum
             // 
-            this.btnSubirCurriculum.Location = new System.Drawing.Point(235, 672);
+            this.btnSubirCurriculum.Location = new System.Drawing.Point(237, 570);
             this.btnSubirCurriculum.Name = "btnSubirCurriculum";
             this.btnSubirCurriculum.Size = new System.Drawing.Size(120, 35);
             this.btnSubirCurriculum.TabIndex = 29;
@@ -294,7 +294,7 @@
             // lblNombreArchivo
             // 
             this.lblNombreArchivo.AutoSize = true;
-            this.lblNombreArchivo.Location = new System.Drawing.Point(97, 681);
+            this.lblNombreArchivo.Location = new System.Drawing.Point(99, 579);
             this.lblNombreArchivo.Name = "lblNombreArchivo";
             this.lblNombreArchivo.Size = new System.Drawing.Size(0, 17);
             this.lblNombreArchivo.TabIndex = 30;
@@ -302,7 +302,7 @@
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.Location = new System.Drawing.Point(376, 673);
+            this.btnVisualizar.Location = new System.Drawing.Point(378, 571);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(120, 35);
             this.btnVisualizar.TabIndex = 31;
@@ -317,21 +317,53 @@
             this.dgvColaboradores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvColaboradores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Telefono,
             this.Nombre,
             this.Email,
-            this.Telefono,
             this.Expediente});
             this.dgvColaboradores.Location = new System.Drawing.Point(493, 68);
             this.dgvColaboradores.MultiSelect = false;
             this.dgvColaboradores.Name = "dgvColaboradores";
+            this.dgvColaboradores.ReadOnly = true;
             this.dgvColaboradores.RowTemplate.Height = 24;
             this.dgvColaboradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvColaboradores.Size = new System.Drawing.Size(656, 482);
             this.dgvColaboradores.TabIndex = 32;
+            this.dgvColaboradores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColaboradores_CellContentClick);
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "ID";
+            this.Telefono.HeaderText = "Cédula";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "NombreCompleto";
+            this.Nombre.HeaderText = "Nombre Completo del Colaborador";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Correo Electrónico";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Expediente
+            // 
+            this.Expediente.HeaderText = "Ver expediente";
+            this.Expediente.Name = "Expediente";
+            this.Expediente.ReadOnly = true;
+            this.Expediente.Text = "Ver expendiente";
+            this.Expediente.ToolTipText = "Ver expendiente";
+            this.Expediente.UseColumnTextForButtonValue = true;
             // 
             // btnConfirmarTomar
             // 
-            this.btnConfirmarTomar.Location = new System.Drawing.Point(235, 605);
+            this.btnConfirmarTomar.Location = new System.Drawing.Point(241, 515);
             this.btnConfirmarTomar.Name = "btnConfirmarTomar";
             this.btnConfirmarTomar.Size = new System.Drawing.Size(163, 35);
             this.btnConfirmarTomar.TabIndex = 33;
@@ -343,7 +375,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 748);
+            this.label11.Location = new System.Drawing.Point(15, 646);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 17);
@@ -353,7 +385,7 @@
             // 
             // btnEditarAtestados
             // 
-            this.btnEditarAtestados.Location = new System.Drawing.Point(232, 739);
+            this.btnEditarAtestados.Location = new System.Drawing.Point(234, 637);
             this.btnEditarAtestados.Name = "btnEditarAtestados";
             this.btnEditarAtestados.Size = new System.Drawing.Size(120, 35);
             this.btnEditarAtestados.TabIndex = 35;
@@ -361,37 +393,11 @@
             this.btnEditarAtestados.UseVisualStyleBackColor = true;
             this.btnEditarAtestados.Click += new System.EventHandler(this.btnEditarAtestados_Click);
             // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "NombreCompleto";
-            this.Nombre.HeaderText = "Nombre Completo del Colaborador";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Correo Electrónico";
-            this.Email.Name = "Email";
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Expediente
-            // 
-            this.Expediente.HeaderText = "Ver expediente";
-            this.Expediente.Name = "Expediente";
-            this.Expediente.Text = "Ver expendiente";
-            this.Expediente.ToolTipText = "Ver expendiente";
-            this.Expediente.UseColumnTextForButtonValue = true;
-            // 
             // frmColaborador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 1000);
+            this.ClientSize = new System.Drawing.Size(1182, 868);
             this.Controls.Add(this.btnEditarAtestados);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnConfirmarTomar);
@@ -466,9 +472,9 @@
         private System.Windows.Forms.Button btnConfirmarTomar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnEditarAtestados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewButtonColumn Expediente;
     }
 }

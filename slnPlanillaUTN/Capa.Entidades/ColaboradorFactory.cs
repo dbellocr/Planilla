@@ -18,11 +18,11 @@ namespace Capa.Entidades
                 Email = email,
                 Estado = estado,
                 Foto = rutaImagen,
-                ID = Convert.ToInt32(id),
+                ID = id,
                 Nombre = nombre,
                 PrimerApellido = primerApellido,
                 SegundoApellido = segundoApellido,
-                Telefono = Convert.ToInt32(telefono)
+                Telefono= telefono
 
             };
 

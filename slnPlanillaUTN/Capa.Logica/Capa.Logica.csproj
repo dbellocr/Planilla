@@ -41,7 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarreraLogica.cs" />
+    <Compile Include="CarreraProfesionalLogica.cs" />
     <Compile Include="ColaboradorLogica.cs" />
+    <Compile Include="CuentaLogica.cs" />
+    <Compile Include="JornadaLogica.cs" />
+    <Compile Include="LoginLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuestoLogica.cs" />
   </ItemGroup>

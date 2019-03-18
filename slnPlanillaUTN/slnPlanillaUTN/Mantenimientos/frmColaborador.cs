@@ -141,18 +141,26 @@ namespace slnPlanillaUTN.Mantenimientos
 
             if(ofdImagen.SafeFileName!="")
             nombreImagen += extensionImagen;
-           
-            
-         
+
+
+
             try
             {
                 pbFotografía.Image.Save(rutaImagenes + nombreImagen + ".jpg", ImageFormat.Jpeg);
-                File.Copy(dialog.FileName, rutaCurriculum+ "Curriculum " + txtID.Text+ Path.GetExtension(dialog.FileName).ToLower());
+                File.Copy(dialog.FileName, rutaCurriculum + "Curriculum " + txtID.Text + Path.GetExtension(dialog.FileName).ToLower(), true);
 
                 // Crea el objeto colaborador a partir de un patrón Factory 
                 Colaborador colaborador = ColaboradorFactory.CrearColaborador(txtID.Text, txtNombre.Text, txtPirmerApellido.Text, txtSegundoApellido.Text, mktTelefono.Text, txtEmail.Text, dialog.SafeFileName, nombreImagen, (Estado)cmbEstado.SelectedItem == Estado.Activo ? true : false);
+                Cuenta cuenta = new Cuenta()
+                {
+                    Colaborador = colaborador,
+                    Contraseña = LoginLogica.Encriptar(colaborador.ID),
+
+                };
+
+                
                 ColaboradorLogica colaboradorLogica = new ColaboradorLogica();
-                colaboradorLogica.Insertar(colaborador);
+                colaboradorLogica.Insertar(colaborador, cuenta);
                 frmAtestado.AsignarColaborador(colaborador);
                 frmAtestado.GuardarArchivos();
                 MessageBox.Show("Se ha guardado el colaborador", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -218,6 +226,23 @@ namespace slnPlanillaUTN.Mantenimientos
         private void btnVerExpediente_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvColaboradores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                //TODO - Button Clicked - Execute Code Here
+
+                Colaborador colaborador = dgvColaboradores.SelectedRows[0].DataBoundItem as Colaborador;
+                frmExpedienteAdministrativo frmExpediente = new frmExpedienteAdministrativo(colaborador);
+                frmExpediente.ShowDialog();
+
+
+            }
         }
     }
 }

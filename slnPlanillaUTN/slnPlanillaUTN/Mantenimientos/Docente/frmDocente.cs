@@ -16,5 +16,11 @@ namespace slnPlanillaUTN.Mantenimientos.Docente
         {
             InitializeComponent();
         }
+
+        private void btnVerExpediente_Click(object sender, EventArgs e)
+        {
+            frmColaborador frm = new frmColaborador();
+            frm.Show();
+        }
     }
 }

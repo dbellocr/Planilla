@@ -38,8 +38,10 @@ namespace Capa.Datos
                 comando.Parameters.AddWithValue("@Curriculum", colaborador.Curriculum);
                 comando.Parameters.AddWithValue("@Foto", colaborador.Foto);
                 comando.Parameters.AddWithValue("@Estado", colaborador.Estado);
+                comando.Parameters.AddWithValue("@Rol", 3);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
+               
             }
             catch
             {
@@ -93,7 +95,7 @@ namespace Capa.Datos
         /// </summary>
         /// <param name="colaborador"></param>
         /// <returns></returns>
-        public Colaborador SeleccionarPorID(Colaborador colaborador)
+        public static Colaborador SeleccionarPorID(string colaboradorID)
         {
 
 
@@ -106,7 +108,7 @@ namespace Capa.Datos
 
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
-                comando.Parameters.AddWithValue("@ID", colaborador.ID);
+                comando.Parameters.AddWithValue("@ID", colaboradorID);
 
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 SqlDataReader reader = comando.ExecuteReader();
@@ -116,19 +118,21 @@ namespace Capa.Datos
 
                     Colaborador c = new Colaborador()
                     {
-                        
-                        ID =Convert.ToUInt16(reader["ID"].ToString()),
+
+                        ID = reader["ID"].ToString(),
                         Foto = reader["Foto"].ToString(),
                         Curriculum = reader["Curriculum"].ToString(),
-                        Telefono =Convert.ToUInt16(reader["Telefono"].ToString()),
-                        Estado =Convert.ToBoolean(reader["Estado"].ToString()),
+                        Telefono = reader["Telefono"].ToString(),
+                        Estado = Convert.ToBoolean(reader["Estado"].ToString()),
                         Email = reader["Email"].ToString(),
                         PrimerApellido = reader["PrimerApellido"].ToString(),
                         SegundoApellido = reader["SegundoApellido"].ToString(),
                         Nombre = reader["Nombre"].ToString(),
+                        Rol = reader["Rol"].ToString() == "3" ? Rol.Docente : reader["Rol"].ToString() == "1" ? Rol.Adminitrativo : Rol.Director
+
                     };
 
-                    return colaborador;
+                    return c;
                 }
 
             }
@@ -168,10 +172,10 @@ namespace Capa.Datos
 
                     Colaborador c = new Colaborador()
                     {
-                        ID = Convert.ToInt32(reader["ID"].ToString()),
+                        ID = reader["ID"].ToString(),
                         Foto = reader["Foto"].ToString(),
                         Curriculum = reader["Curriculum"].ToString(),
-                        Telefono = Convert.ToInt32(reader["Telefono"].ToString()),
+                        Telefono = reader["Telefono"].ToString(),
                         Email = reader["Email"].ToString(),
                         PrimerApellido = reader["PrimerApellido"].ToString(),
                         SegundoApellido = reader["SegundoApellido"].ToString(),

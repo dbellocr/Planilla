@@ -40,9 +40,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.mktFechaIngreso = new System.Windows.Forms.MaskedTextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnVerExpediente = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreColaborador = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +69,7 @@
             this.cmbIDPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIDPuesto.FormattingEnabled = true;
             this.cmbIDPuesto.Location = new System.Drawing.Point(251, 89);
-            this.cmbIDPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbIDPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIDPuesto.Name = "cmbIDPuesto";
             this.cmbIDPuesto.Size = new System.Drawing.Size(160, 24);
             this.cmbIDPuesto.TabIndex = 5;
@@ -90,7 +89,7 @@
             this.cmbIDCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIDCarrera.FormattingEnabled = true;
             this.cmbIDCarrera.Location = new System.Drawing.Point(251, 122);
-            this.cmbIDCarrera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbIDCarrera.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIDCarrera.Name = "cmbIDCarrera";
             this.cmbIDCarrera.Size = new System.Drawing.Size(160, 24);
             this.cmbIDCarrera.TabIndex = 7;
@@ -110,7 +109,7 @@
             this.cmbIDJornada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIDJornada.FormattingEnabled = true;
             this.cmbIDJornada.Location = new System.Drawing.Point(251, 155);
-            this.cmbIDJornada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbIDJornada.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIDJornada.Name = "cmbIDJornada";
             this.cmbIDJornada.Size = new System.Drawing.Size(160, 24);
             this.cmbIDJornada.TabIndex = 9;
@@ -130,7 +129,7 @@
             this.cmbCProfesional.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCProfesional.FormattingEnabled = true;
             this.cmbCProfesional.Location = new System.Drawing.Point(251, 188);
-            this.cmbCProfesional.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCProfesional.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCProfesional.Name = "cmbCProfesional";
             this.cmbCProfesional.Size = new System.Drawing.Size(160, 24);
             this.cmbCProfesional.TabIndex = 11;
@@ -148,7 +147,7 @@
             // mktFechaIngreso
             // 
             this.mktFechaIngreso.Location = new System.Drawing.Point(251, 57);
-            this.mktFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mktFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.mktFechaIngreso.Mask = "00/00/0000";
             this.mktFechaIngreso.Name = "mktFechaIngreso";
             this.mktFechaIngreso.Size = new System.Drawing.Size(160, 22);
@@ -158,50 +157,39 @@
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(111, 235);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(175, 48);
             this.btnAceptar.TabIndex = 13;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // btnVerExpediente
-            // 
-            this.btnVerExpediente.Location = new System.Drawing.Point(309, 235);
-            this.btnVerExpediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnVerExpediente.Name = "btnVerExpediente";
-            this.btnVerExpediente.Size = new System.Drawing.Size(193, 48);
-            this.btnVerExpediente.TabIndex = 14;
-            this.btnVerExpediente.Text = "Ver Expediente";
-            this.btnVerExpediente.UseVisualStyleBackColor = true;
-            this.btnVerExpediente.Click += new System.EventHandler(this.btnVerExpediente_Click);
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(223, 291);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(307, 237);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(172, 57);
+            this.btnSalir.Size = new System.Drawing.Size(172, 46);
             this.btnSalir.TabIndex = 15;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNombreColaborador
             // 
-            this.textBox1.Location = new System.Drawing.Point(251, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 22);
-            this.textBox1.TabIndex = 16;
+            this.txtNombreColaborador.Location = new System.Drawing.Point(251, 23);
+            this.txtNombreColaborador.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreColaborador.Name = "txtNombreColaborador";
+            this.txtNombreColaborador.ReadOnly = true;
+            this.txtNombreColaborador.Size = new System.Drawing.Size(307, 22);
+            this.txtNombreColaborador.TabIndex = 16;
             // 
-            // frmExpediente
+            // frmExpedienteAdministrativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 370);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(609, 324);
+            this.Controls.Add(this.txtNombreColaborador);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnVerExpediente);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.mktFechaIngreso);
             this.Controls.Add(this.cmbCProfesional);
@@ -214,10 +202,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmExpediente";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmExpedienteAdministrativo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expediente";
+            this.Load += new System.EventHandler(this.frmExpedienteAdministrativo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,8 +226,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox mktFechaIngreso;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnVerExpediente;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreColaborador;
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="PlanillaSalarial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puesto.cs" />
+    <Compile Include="Rol.cs" />
     <Compile Include="Vacaciones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

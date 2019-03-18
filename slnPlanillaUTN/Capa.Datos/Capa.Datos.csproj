@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarreraDatos.cs" />
+    <Compile Include="CarreraProfesionalDatos.cs" />
     <Compile Include="ColaboradorDatos.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="CuentaDatos.cs" />
+    <Compile Include="JornadaDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PuestosDatos.cs" />
   </ItemGroup>

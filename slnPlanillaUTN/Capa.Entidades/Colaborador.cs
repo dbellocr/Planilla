@@ -14,15 +14,16 @@ namespace Capa.Entidades
         /// <summary>
         /// Declarar las variables
         /// </summary>
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Nombre { get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Email { get; set; }
         public string Curriculum { get; set; }
         public string Foto { get; set; }
         public bool Estado { get; set; }
+        public Rol Rol { get; set; }
 
         public string NombreCompleto
         {

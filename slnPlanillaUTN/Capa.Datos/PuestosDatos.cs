@@ -44,7 +44,7 @@ namespace Capa.Datos
 
                         ID =Convert.ToInt16(reader["ID"].ToString()),
                         Descripcion = reader["Descripcion"].ToString(),
-                        SalarioBase =Convert.ToDouble(reader["Director"].ToString()),
+                        SalarioBase = Convert.ToDouble(reader["SalarioBase"])
                     };
 
                     return puesto;
@@ -89,7 +89,7 @@ namespace Capa.Datos
                     {
                         ID = Convert.ToInt16(reader["ID"].ToString()),
                         Descripcion = reader["Descripcion"].ToString(),
-                        SalarioBase = Convert.ToDouble(reader["Director"].ToString()),
+                        SalarioBase = Convert.ToDouble(reader["SalarioBase"])
                     };
                     puestos.Add(p);
                 }
